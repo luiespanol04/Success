@@ -1,0 +1,55 @@
+.buttonC {
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(to right, rgba(54, 54, 54, 0.5) 0.2%, transparent);
+  color: white;
+  font-family: GothamBook;
+  font-size: 16px;
+  font-weight: 100;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+}
+.buttonC::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, white, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.buttonC:hover {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(
+    to right,
+    rgba(115, 255, 248, 0.404) 0.2%,
+    transparent
+  );
+
+  font-family: GothamBook;
+  font-weight: 100;
+}
+.buttonC:hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #73fff7, transparent);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.buttonC a {
+  font-family: GothamBook;
+  font-size: 16px;
+}

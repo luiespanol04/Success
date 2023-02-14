@@ -1,0 +1,77 @@
+.HeaderContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  min-width: 318px;
+  background: transparent;
+  padding: 0 0 0 20px;
+}
+
+.imgLogo {
+  z-index: 99;
+  width: 230px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.IconLogin {
+  width: 24px;
+  height: 21px;
+  cursor: pointer;
+}
+.btnsHeader {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.btnsTranslate {
+  display: flex;
+  margin-right: 20px;
+  z-index: 99;
+}
+
+.btnsDisconnect {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+}
+.img {
+  width: 30px;
+  height: auto;
+  margin: 0;
+}
+.Logo {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .imgLogo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .HeaderContainer {
+    padding: 0 10px 0 0;
+    height: 50px;
+    align-items: flex-end;
+  }
+  .btnsHeader {
+    margin: 0;
+    justify-content: flex-end;
+  }
+  .btnsTranslate {
+    margin: 0 10px 0 0;
+  }
+  .img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+  }
+  .Logo {
+    display: none;
+  }
+}

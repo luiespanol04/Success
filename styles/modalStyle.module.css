@@ -1,0 +1,64 @@
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.degraded {
+  border-style: solid;
+  border-image: linear-gradient(45deg, transparent, #73fff7, transparent) 1;
+  width: 40%;
+  border-width: 1.5px;
+}
+.contentModal {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(52, 52, 52, 0) 0%,
+    #343434 51.04%,
+    rgba(52, 52, 52, 0) 100%
+  );
+  padding-block: 4%;
+  color: #ffffff;
+}
+
+.contenido div {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .degraded {
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .degraded {
+    width: 100%;
+  }
+  .contentModal {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-inline: 10px;
+    /* min-height: 350px; */
+    text-align: center;
+  }
+}
+@media (max-height: 400px) {
+  .contentModal {
+    width: 500px;
+    height: 350px;
+  }
+}

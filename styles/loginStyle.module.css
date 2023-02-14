@@ -1,0 +1,379 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.containerBackground {
+  width: 100%;
+  position: relative;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 60px 60px 0 60px;
+}
+.contentImg {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 0;
+}
+.video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  /* overflow: auto; */
+  /* transform: rotateY(179deg); */
+}
+.degradado {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(90deg, #000000 35.87%, rgba(0, 0, 0, 0) 100.73%);
+}
+.logo_city {
+  width: 242px;
+  height: 219px;
+}
+.degraded {
+  border-style: solid;
+  border-image: linear-gradient(45deg, transparent, #73fff7, transparent) 1;
+  width: 150%;
+  border-width: 1.5px;
+}
+/* .changeLanguage {
+  display: flex;
+} */
+.contentDescription {
+  height: 100%;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 100px 100px;
+  color: #fff;
+  gap: 50px;
+  align-items: center;
+}
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title h1 {
+  font-family: GothamBold;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 0.38em;
+  margin-bottom: 30px;
+}
+
+.title p {
+  font-family: GothamBook;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+
+.conexion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 20px; */
+}
+.conexion div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0 30px 0;
+}
+
+.conexion p {
+  margin: 0 0 0 10px;
+  /* padding-bottom: 30px; */
+  font-size: 2 0px;
+}
+.conexion img {
+  width: 25px;
+  height: 25px;
+}
+
+.conexion button {
+  margin-top: 20px !important;
+  position: relative !important;
+  z-index: 0 !important;
+  background: rgba(54, 54, 54, 0.5) !important;
+  color: white !important;
+  /* font-family: GothamBook !important; */
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  width: 200px !important;
+  height: 60px !important;
+  text-align: center !important;
+  text-transform: uppercase;
+}
+.conexion button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, white, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.conexion button:hover {
+  position: relative !important;
+  z-index: 0 !important;
+  background: linear-gradient(
+    89.74deg,
+    rgba(115, 255, 248, 0.404) 0.2%,
+    rgba(115, 255, 247, 0) 99.77%
+  ) !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+.conexion button:hover::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  padding: 1.5px !important;
+  border-radius: 5px !important;
+  background: linear-gradient(to right, #73fff7, transparent) !important;
+  -webkit-mask-composite: xor !important;
+  mask-composite: exclude !important;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.MapImgCanvas {
+  height: 100%;
+  width: calc(100% - 400px);
+  z-index: 10;
+}
+.lottie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .changeLanguageL {
+  display: none;
+} */
+@media (min-width: 1700px) {
+  .contentDescription {
+    padding-left: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .logo {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .degradado {
+    background: linear-gradient(
+      180deg,
+      #000000 -1.3%,
+      #000000 41.41%,
+      rgba(87, 87, 87, 0.155) 98.7%
+    );
+  }
+  .container {
+    flex-direction: column;
+  }
+  .contentDescription {
+    padding-left: 0;
+  }
+  .logo_header {
+    display: none;
+  }
+  .containerBackground {
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 1440px) {
+  .title h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .title p {
+    font-size: 20px;
+    width: 420px;
+  }
+
+  /* .conexion div {
+    align-items: center;
+    margin: 0px 0 30px 0;
+  } */
+  .conexion p {
+    margin: 0 0 0 7px;
+    font-size: 20px;
+  }
+  .conexion img {
+    width: 15px;
+    height: 15px;
+  }
+  .img {
+    width: 150px;
+    bottom: 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  .changeLanguageL {
+    display: flex;
+  }
+  .changeLanguage {
+    display: none;
+  }
+  .conexion button {
+    font-size: 12px !important;
+    width: 160px !important;
+    height: 50px !important;
+  }
+  .degraded {
+    width: 85%;
+    margin-top: 20px;
+    border-width: 2.5px;
+  }
+  .logo_city {
+    width: 142px;
+    height: 119px;
+  }
+  .contentDescription {
+    width: 100%;
+    /* padding: 130px 0 50px 0; */
+  }
+  .containerBackground {
+    padding: 20px 20px 0 0;
+    justify-content: flex-end;
+    z-index: 41;
+  }
+  .title h1 {
+    font-size: 25px;
+  }
+
+  .title p {
+    font-size: 18px;
+    width: 310px;
+  }
+
+  .conexion {
+    margin: 0;
+  }
+  .conexion div {
+    align-items: center;
+    margin: 0px 0 30px 0;
+  }
+  .conexion p {
+    margin: 0 0 0 7px;
+    font-size: 18px;
+  }
+  .conexion img {
+    width: 15px;
+    height: 15px;
+  }
+  .img {
+    width: 150px;
+    bottom: 20%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contentDescription {
+    /* padding: 130px 0 50px 0px; */
+  }
+
+  .title h1 {
+    font-size: 20px;
+  }
+
+  .title p {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 0px;
+    width: 210px;
+  }
+
+  .conexion {
+    margin: 0;
+  }
+  .conexion div {
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+
+  .conexion p {
+    font-size: 14px;
+    margin: 0 0 0 7px;
+  }
+  .conexion img {
+    width: 10px;
+    height: 10px;
+  }
+  .img {
+    position: absolute;
+    bottom: 0;
+    width: 112px;
+  }
+}
+@media (max-height: 400px) {
+  .img {
+    display: none;
+  }
+}
+@media (max-height: 500px) {
+  .contentDescription {
+    padding: 10px 10px 20px 10px;
+    gap: 10px;
+  }
+  .title h1 {
+    font-size: 20px;
+  }
+
+  .title p {
+    font-size: 14px;
+    line-height: 15px;
+    margin-bottom: 0px;
+  }
+  .conexion {
+    margin: 0;
+  }
+  .conexion div {
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+
+  .logo {
+    display: none;
+  }
+  .conexion img {
+    width: 10px;
+    height: 10px;
+  }
+}

@@ -1,0 +1,424 @@
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+.Background {
+  position: absolute;
+  z-index: 1;
+}
+.ImageBackground {
+  width: 100vw;
+  height: 100%;
+}
+.container {
+  position: relative;
+  background: #000000;
+  width: 50%;
+  padding-inline: 20px;
+}
+.containerInfoSection {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 20px;
+}
+.InfoSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 50;
+}
+.Subtitle {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+  /* margin-bottom: 20px; */
+  margin-top: 20px;
+  font-family: GothamBook;
+  width: 260px;
+}
+
+.SecondSubtitles h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  line-height: 1.4rem;
+}
+
+.SecondSubtitles p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  font-family: GothamBook;
+  width: 290px;
+}
+
+.SecondSubtitles {
+  display: flex;
+  justify-content: center;
+}
+.btnP {
+  margin: 0 !important;
+  width: auto;
+}
+.containerBtnClaim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: GothamBold;
+  margin-top: 10px;
+}
+.btnPDF {
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(to right, rgba(54, 54, 54, 0.5) 0.2%, transparent);
+  color: white;
+  font-family: GothamBook;
+  font-size: 16px;
+  font-weight: 100;
+  /* width: 300px; */
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  padding-left: 30px;
+}
+.btnPDF::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, white, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.btnPDF:hover {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(
+    to right,
+    rgba(115, 255, 248, 0.404) 0.2%,
+    transparent
+  );
+
+  font-family: GothamBook;
+  font-weight: 100;
+}
+.btnPDF:hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #73fff7, transparent);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.titleBtnMint {
+  font-family: GothamBold;
+}
+.btnClaim {
+  padding-block: 5px;
+}
+.containerBtnDescription {
+  text-align: center;
+}
+.titleLink {
+  font-family: GothamBold;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  vertical-align: sub;
+}
+.IconUnreal {
+}
+.MapSection {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.MapImgCanvas {
+  height: 100%;
+  width: calc(100% - 400px);
+  z-index: 10;
+}
+.MapImg {
+  width: 220px;
+  height: 212px;
+  display: none;
+}
+
+.IconArrow {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.btnPDFlaim {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.containerButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modalIwant {
+  display: flex;
+}
+.btnBack {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: GothamBold;
+  background: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  border: solid white;
+}
+.btnBack:hover {
+  background: black !important;
+  color: white !important;
+}
+.btnIWant {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: GothamBold;
+  background: white;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  border: solid white;
+}
+.contentModalFNT {
+  display: flex;
+  flex-direction: column;
+}
+.contentImgNFT {
+  width: 100%;
+}
+.imgNFT {
+  /* width: 100%; */
+  /* max-width: 300px; */
+  border-radius: 10px;
+  margin-inline: 10px;
+  margin-bottom: 10px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.button {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.lottie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.contentAnimationLoad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentAnimationLoad p {
+  width: 400px;
+  text-align: center;
+}
+.carg {
+  height: 100px;
+}
+.contentAnimationSad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contentAnimationSad p {
+  margin: 0;
+  margin-top: 10px;
+}
+.animationSad {
+  height: 100px;
+}
+@media (max-width: 1024px) {
+  .modal {
+    width: 252px;
+    height: 312px;
+    border-radius: 12px;
+    font-size: 13px;
+    z-index: 40;
+  }
+  .button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-height: 525px) {
+  .modal {
+    height: 100%;
+  }
+}
+@media (max-height: 400px) {
+  .contentModalFNT {
+    align-items: center;
+  }
+  .imgNFT {
+    height: 60%;
+    width: 70%;
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 900px) {
+  .btnP {
+    margin: 0 !important;
+    width: auto;
+  }
+  .btnPDF {
+    margin: 0;
+    width: 210px;
+    font-size: 14px;
+    padding-inline: 30px;
+  }
+  .btnBack {
+    font-size: 14px;
+  }
+  .btnIWant {
+    font-size: 14px;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    /* margin-top: 30px; */
+  }
+  .content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .containerInfoSection {
+    padding: 0px;
+    margin: 0;
+  }
+  .Background {
+    left: -100;
+    top: 0;
+  }
+
+  .titleLink {
+    vertical-align: baseline;
+  }
+
+  .MapSection {
+    height: 100%;
+    width: 100vw;
+  }
+  .MapImgCanvas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(2 / 3 * 100vh);
+    max-height: 100vh;
+  }
+  .InfoSection {
+    padding: 0 10px 0 10px;
+    align-items: center;
+  }
+  .logo_city {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .Subtitle {
+    font-size: 18px;
+    line-height: 16px;
+    width: 310px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .SecondSubtitles h3 {
+    font-size: 20px;
+  }
+  .SecondSubtitles p {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 30px;
+    width: 330px;
+  }
+  .containerBtnClaim {
+    margin-top: 0;
+    margin-block: 10px;
+  }
+  .containerBtnClaim a {
+    font-size: 14px;
+    font-family: GothamBold;
+    padding: 0;
+  }
+  .Message {
+    font-family: GothamBook;
+    line-height: 18px;
+  }
+  .containerBtnClaim button {
+    margin-top: 0;
+  }
+  .containerButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  .container {
+    margin-top: 0;
+  }
+  .logo_city {
+    height: 110px;
+    margin-bottom: 10px;
+  }
+  .Subtitle {
+    font-size: 14px;
+    line-height: 13px;
+    width: 280px;
+  }
+  .SecondSubtitles h3 {
+    font-size: 15px;
+    line-height: 13px;
+  }
+  .SecondSubtitles p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 278px;
+  }
+  .MapImgCanvas {
+    overflow: auto;
+  }
+}
